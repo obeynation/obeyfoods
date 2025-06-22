@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBEY FOOD'S - Authentic Nigerian Cuisine Delivery</title>
+    <meta name="description" content="Order authentic Nigerian food online. Fresh Jollof rice, Pounded yam, Suya, and more traditional dishes delivered to your doorstep.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>OBEY FOOD'S</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="kitchen.html" class="nav-link">Kitchen</a></li>
+                <li><a href="order.html" class="nav-link">Order</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="cart-container">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: ₦<span id="cart-total">0</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to <span class="highlight">OBEY FOOD'S</span></h1>
+                <p>Taste the authentic flavors of Nigeria delivered fresh to your doorstep. From traditional jollof rice to crispy chin chin - we bring Nigeria to you!</p>
+                <div class="hero-buttons">
+                    <a href="kitchen.html" class="btn btn-primary">
+                        <i class="fas fa-utensils"></i>
+                        Explore Our Kitchen
+                    </a>
+                    <a href="order.html" class="btn btn-secondary">
+                        <i class="fas fa-shopping-cart"></i>
+                        Order Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Items -->
+        <section class="featured">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Nigerian Delicacies</h2>
+                    <p>Discover our most popular dishes, carefully prepared with traditional recipes and the finest Nigerian ingredients.</p>
+                </div>
+                <div id="featured-items" class="food-grid"></div>
+                <div class="text-center">
+                    <a href="kitchen.html" class="btn btn-primary">View Full Menu</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose OBEY FOOD'S?</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon green">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Authentic Nigerian Cuisine</h3>
+                        <p>Traditional recipes passed down through generations, prepared with love and care.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon yellow">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>Quick and reliable delivery service to bring fresh meals to your doorstep.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon red">
+                            <span>🌶️</span>
+                        </div>
+                        <h3>Fresh Ingredients</h3>
+                        <p>Only the freshest, highest quality ingredients sourced locally when possible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Customers Say</h2>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <div class="avatar">A</div>
+                            <div>
+                                <h4>Odunayo Ebenezer</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"The jollof rice here tastes just like my grandmother's! Absolutely authentic and delicious."</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <div class="avatar">F</div>
+                            <div>
+                                <h4>Sangoyoyiwa Caleb</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"Fast delivery and the pounded yam was perfect! Will definitely order again."</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-header">
+                            <div class="avatar">E</div>
+                            <div>
+                                <h4>Onayemi Daniel</h4>
+                                <div class="stars">★★★★★</div>
+                            </div>
+                        </div>
+                        <p>"Best Nigerian food delivery service! The suya is incredibly flavorful."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OBEY FOOD'S</h3>
+                    <p>Bringing authentic Nigerian flavors to your doorstep with love, tradition, and excellence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="kitchen.html">Kitchen</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +234 913 184 8867</p>
+                        <p><i class="fas fa-envelope"></i> francisevenezer@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Ogun State, Nigeria</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="hours">
+                        <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+                        <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OBEY FOOD'S. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - OBEY FOOD'S</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>OBEY FOOD'S</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="kitchen.html" class="nav-link">Kitchen</a></li>
+                <li><a href="order.html" class="nav-link">Order</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="cart-container">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: ₦<span id="cart-total">0</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <main>
+        <section class="page-header about-header">
+            <div class="container">
+                <h1>About OBEY FOOD'S</h1>
+                <p>Bringing authentic Nigerian flavors to your doorstep with love, tradition, and excellence.</p>
+            </div>
+        </section>
+
+        <section class="about-story">
+            <div class="container">
+                <div class="story-content">
+                    <div class="story-text">
+                        <h2>Our Story</h2>
+                        <p>OBEY FOOD'S was born from a passion for authentic Nigerian cuisine and a desire to share our rich culinary heritage with food lovers everywhere. Founded in 2020, we started as a small family kitchen with big dreams.</p>
+                        <p>Our founder, Chef Obey, grew up learning traditional recipes from her grandmother in Lagos. She understood that food is more than sustenance – it's a connection to culture, family, and home. That's why every dish we prepare carries the authentic taste of Nigeria.</p>
+                        <p>Today, OBEY FOOD'S has grown into a beloved local brand, but we've never forgotten our roots. We continue to use traditional cooking methods, source the finest ingredients, and prepare every meal with the same love and care as if we were cooking for our own family.</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600" alt="Nigerian cooking">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Values</h2>
+                    <p>These core values guide everything we do at OBEY FOOD'S</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value">
+                        <div class="value-icon green">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Authenticity</h3>
+                        <p>Every recipe is traditional, every flavor authentic to Nigerian cuisine.</p>
+                    </div>
+                    <div class="value">
+                        <div class="value-icon red">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Quality</h3>
+                        <p>We use only the finest, freshest ingredients in all our dishes.</p>
+                    </div>
+                    <div class="value">
+                        <div class="value-icon blue">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Community</h3>
+                        <p>We're proud to serve and support our local community.</p>
+                    </div>
+                    <div class="value">
+                        <div class="value-icon yellow">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Service</h3>
+                        <p>Fast, reliable delivery with a smile every time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Meet Our Team</h2>
+                    <p>The passionate people behind OBEY FOOD'S who make it all possible</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-avatar">CO</div>
+                        <h3>Chef Obey</h3>
+                        <p class="member-role">Founder & Head Chef</p>
+                        <p>With over 2 years of experience in his mother's kitchen, Chef Obey brings authentic Nigerian flavors to life.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">MS</div>
+                        <h3>Mrs Sangoyoyiwa </h3>
+                        <p class="member-role">Operations Manager</p>
+                        <p>Ensures every order is prepared to perfection and delivered with care.</p>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-avatar">OE</div>
+                        <h3>Olarinde Ebenezer</h3>
+                        <p class="member-role">Customer Relations</p>
+                        <p>Dedicated to ensuring every customer has an amazing experience with us.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">18</div>
+                        <div class="stat-label">Menu Items</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Years of Service</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Customer Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OBEY FOOD'S</h3>
+                    <p>Bringing authentic Nigerian flavors to your doorstep with love, tradition, and excellence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="kitchen.html">Kitchen</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +234 913 184 8867</p>
+                        <p><i class="fas fa-envelope"></i> francisevenezer@gmail.com/p>
+                        <p><i class="fas fa-map-marker-alt"></i> Ogun State, Nigeria</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="hours">
+                        <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+                        <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OBEY FOOD'S. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

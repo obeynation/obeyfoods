@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - OBEY FOOD'S</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>OBEY FOOD'S</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="kitchen.html" class="nav-link">Kitchen</a></li>
+                <li><a href="order.html" class="nav-link">Order</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li class="cart-container">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: ₦<span id="cart-total">0</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with OBEY FOOD'S. We'd love to hear from you!</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Get In Touch</h2>
+                        <p>Have questions about our menu, delivery, or catering services? We're here to help!</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+234 913 184 8867</p>
+                                <p>+234 814 512 8639</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@obeyfoods.com</p>
+                                <p>francisevenezer@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3>Address</h3>
+                                <p>PAF Obada<br>Abeokuta<br>Ogun State, Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3>Opening Hours</h3>
+                                <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+                                <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Send Us A Message</h2>
+                        <form id="contact-form" class="contact-form" action="https://formsubmit.co/francisevenezer@gmail.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-name">Name *</label>
+                                    <input type="text" id="contact-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">Email *</label>
+                                    <input type="email" id="contact-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Phone</label>
+                                <input type="tel" id="contact-phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject *</label>
+                                <select id="contact-subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="order">Order Issue</option>
+                                    <option value="catering">Catering Services</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message *</label>
+                                <textarea id="contact-message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>What areas do you deliver to?</h3>
+                        <p>We currently deliver to most areas within Lagos. Please call us to confirm if we deliver to your location.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How long does delivery take?</h3>
+                        <p>Typical delivery time is 30-45 minutes, depending on your location and order size.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Do you offer catering services?</h3>
+                        <p>Yes! We provide catering for events, parties, and corporate functions. Contact us for more details.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What payment methods do you accept?</h3>
+                        <p>We accept cash on delivery and bank transfers. Online payment options coming soon!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OBEY FOOD'S</h3>
+                    <p>Bringing authentic Nigerian flavors to your doorstep with love, tradition, and excellence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="kitchen.html">Kitchen</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +234 913 184 8867</p>
+                        <p><i class="fas fa-envelope"></i> francisevenezer@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Ogun State, Nigeria</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="hours">
+                        <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+                        <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OBEY FOOD'S. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Kitchen - OBEY FOOD'S</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>OBEY FOOD'S</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="kitchen.html" class="nav-link active">Kitchen</a></li>
+                <li><a href="order.html" class="nav-link">Order</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="cart-container">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">&times;</button>
+            </div>
+            <div id="cart-items" class="cart-items"></div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: ₦<span id="cart-total">0</span></strong>
+                </div>
+                <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="cart-overlay" onclick="toggleCart()"></div>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Kitchen</h1>
+                <p>Explore our extensive collection of authentic Nigerian dishes, from hearty main courses to delicious snacks and refreshing traditional drinks.</p>
+            </div>
+        </section>
+
+        <section class="kitchen-content">
+            <div class="container">
+                <!-- Category Filter -->
+                <div class="category-filter">
+                    <button class="filter-btn active" data-category="all">All Items</button>
+                    <button class="filter-btn" data-category="main">Main Dishes</button>
+                    <button class="filter-btn" data-category="snack">Snacks</button>
+                    <button class="filter-btn" data-category="drink">Drinks</button>
+                </div>
+
+                <!-- Food Items Grid -->
+                <div id="kitchen-items" class="food-grid"></div>
+
+                <!-- Category Descriptions -->
+                <div class="category-descriptions">
+                    <div class="category-desc">
+                        <h3>Main Dishes</h3>
+                        <p>Hearty traditional Nigerian meals including jollof rice, pounded yam with various soups, and other local favorites that make up the heart of Nigerian cuisine.</p>
+                    </div>
+                    <div class="category-desc">
+                        <h3>Snacks</h3>
+                        <p>Perfect for any time of day! From sweet puff puff to savory meat pies, our snacks capture the essence of Nigerian street food culture.</p>
+                    </div>
+                    <div class="category-desc">
+                        <h3>Drinks</h3>
+                        <p>Traditional Nigerian beverages including zobo, tiger nut drink, and fresh fruit juices to complement your meal or enjoy on their own.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OBEY FOOD'S</h3>
+                    <p>Bringing authentic Nigerian flavors to your doorstep with love, tradition, and excellence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="kitchen.html">Kitchen</a></li>
+                        <li><a href="order.html">Order</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +234 913 184 8867</p>
+                        <p><i class="fas fa-envelope"></i> francisevenezer@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Ogun State, Nigeria</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Opening Hours</h4>
+                    <div class="hours">
+                        <p>Monday - Friday: 9:00 AM - 10:00 PM</p>
+                        <p>Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OBEY FOOD'S. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
